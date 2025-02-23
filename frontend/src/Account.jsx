@@ -3,11 +3,9 @@ import axios from 'axios';
 import './Account.css';
 
 const Connection = () => {
-    const [data, setData] = useState([]); // เก็บข้อมูลจาก API
-    const [loading, setLoading] = useState(true); // ใช้แสดงสถานะการโหลด
-    const [searchTerm, setSearchTerm] = useState(''); // ใช้เก็บค่าการค้นหา
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    // ดึงข้อมูลจาก API
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -23,39 +21,28 @@ const Connection = () => {
         fetchData();
     }, []);
 
-    console.log(data);
-
     return (
-        <div>
-            <h2 className="title">บัญชีผู้ใช้ทั้งหมด</h2>
-
-
-            <table className="connection-table">
-                <thead>
-                    <tr>
-                        <th>รายการ</th>
-                        <th>จำนวน</th>
-                    </tr>
-                </thead>
-                <tbody>
+        <div className="account-page">
+            <div className="account-container">
+                <h1>บัญชีผู้ใช้ทั้งหมด</h1>
                 {loading ? (
-                    <tr>
-                        <td>กำลังโหลด...</td>
-                    </tr>
-                ):( data.length > 0 ? (
-                        data.map((item, index) => (
-                            <tr key={index}>
-                                <td>{item.name}</td>
-                                <td>{item.count}</td>
-                            </tr>
-                        ))
-                    ) : (
-                        <tr>
-                            <td colSpan="2">ไม่มีข้อมูล</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+                    <p className="loading">กำลังโหลด...</p>
+                ) : data.length > 0 ? (
+                    <div className="card-container">
+                        {data.map((item, index) => (
+                            <div
+                                className={`card ${item.name === "จำนวนบัญชีผู้ใช้งาน" ? "highlight-card" : ""}`}
+                                key={index}
+                            >
+                                <h3 className="card-title">{item.name}</h3>
+                                <p className="card-count">จำนวน: {item.count}</p>
+                            </div>
+                        ))}
+                    </div>
+                ) : (
+                    <p className="no-data">ไม่มีข้อมูล</p>
+                )}
+            </div>
         </div>
     );
 };

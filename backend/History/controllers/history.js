@@ -9,7 +9,7 @@ router.get('/history', async(req, res) => {
         const [history] = await db.execute(`
             SELECT startDate, amountStart, amountEnd
             FROM history_planting
-            ORDER BY startDate DESC
+            ORDER BY hisId
         `);
 
         res.json(history);

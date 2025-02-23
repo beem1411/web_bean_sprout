@@ -108,7 +108,7 @@ const Settings = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="startTime">เริ่ม :</label>
+              <label htmlFor="startTime">เริ่มต้นการปลูก :</label>
               <select
                 name="startTime"
                 value={startTime}
@@ -119,7 +119,7 @@ const Settings = () => {
               </select>
             </div>
             <div className="form-group">
-              <label htmlFor="endTime">สิ้นสุด :</label>
+              <label htmlFor="endTime">สิ้นสุดการปลูก :</label>
               <select
                 type="time"
                 step="1" 

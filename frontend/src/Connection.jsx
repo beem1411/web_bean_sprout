@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./Connection.css"; 
+import "./Connection.css";
 
 const Connection = () => {
-    const [data, setData] = useState([]); 
-    const [loading, setLoading] = useState(true); 
-    const [searchTerm, setSearchTerm] = useState(""); 
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [searchTerm, setSearchTerm] = useState("");
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get("http://localhost:8000/userscon");
                 console.log("Fetched Data:", response.data);
-                setData(response.data || []); 
+                setData(response.data || []);
             } catch (error) {
                 console.error("Error fetching data:", error);
             } finally {
@@ -38,7 +38,7 @@ const Connection = () => {
     return (
         <div>
             <h2 className="title">สถานะผู้ใช้แอพพลิเคชัน</h2>
-            
+
             <div className="search-container">
                 <input
                     type="text"
@@ -76,7 +76,7 @@ const Connection = () => {
                         ))
                     ) : (
                         <tr>
-                            <td colSpan="4">ไม่พบข้อมูลที่ตรงกับคำค้นหา</td>
+                            <td colSpan="4">ไม่พบข้อมูล</td>
                         </tr>
                     )}
                 </tbody>

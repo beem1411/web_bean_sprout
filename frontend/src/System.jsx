@@ -55,7 +55,7 @@ const SystemDatabase = () => {
 
   return (
     <div style={{ paddingTop: "20px" }}>
-      <h2 className="table-title">การจัดการผู้ใช้แอพพลิเคชัน</h2>
+      <h2 className="table-title">การจัดการผู้ใช้แอปพลิเคชัน</h2>
       {users.length > 0 ? (
         <table>
           <thead>
