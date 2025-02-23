@@ -1,0 +1,116 @@
+/* General Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Login Container */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: #82e0ec;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+/* Login Box */
+
+.login-box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 700px;
+    /* ปรับขนาดให้ใหญ่ขึ้นเป็นสี่เหลี่ยมผืนผ้า */
+    height: 500px;
+    /* ความสูงเพิ่มขึ้นเพื่อให้สมดุล */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Welcome Text */
+
+.welcome-text {
+    margin-bottom: 20px;
+}
+
+.welcome-text h2 {
+    font-size: 28px;
+    color: #319fb5;
+    margin-bottom: 5px;
+}
+
+.welcome-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+/* User Icon */
+
+.user-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Login Form */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    /* ให้ฟอร์มขยายตามความกว้างของกล่อง */
+}
+
+.login-input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    /* ขยายอินพุตให้เต็มฟอร์ม */
+}
+
+
+/* Login Button */
+
+.login-button {
+    background-color: #319fb5;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    /* ขยายปุ่มให้เต็มฟอร์ม */
+}
+
+.login-button:hover {
+    background-color: #277d89;
+}

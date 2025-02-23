@@ -1,0 +1,162 @@
+/* ปรับให้ html และ body รองรับการเลื่อน */
+
+html,
+body {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+}
+
+
+/* ปรับขนาดตารางและเพิ่มเอฟเฟกต์ Hover สำหรับแต่ละช่อง */
+
+.history-container {
+    text-align: center;
+    margin-top: 20px;
+    padding: 30px;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    min-height: 100vh;
+    /* ป้องกันหน้าค้าง */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ตัวกรอง */
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-item label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.filter-item select {
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+/* ปรับตาราง */
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 20px auto;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    max-height: 70vh;
+    /* ป้องกันไม่ให้เกินขอบจอ */
+    overflow-y: auto;
+    /* อนุญาตให้เลื่อน */
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+/* ปรับปรุงขอบเขตของตาราง */
+
+.history-table th,
+.history-table td {
+    border: 1px solid #007BFF;
+    padding: 12px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.history-table th {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.history-table td {
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* เพิ่มเอฟเฟกต์ Hover สำหรับแต่ละช่อง */
+
+.history-table td:hover {
+    background-color: #d3d3d3;
+    cursor: pointer;
+}
+
+
+/* สลับสีของแถว */
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+
+/* ผลรวม */
+
+.average-container {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #057aef;
+    text-align: center;
+}
+
+
+/* หัวข้อ */
+
+h1,
+h2 {
+    color: #000000;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* ข้อความแจ้งเตือน */
+
+.no-data {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}

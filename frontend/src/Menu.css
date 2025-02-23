@@ -1,0 +1,112 @@
+/* จัดแต่งทั่วไป */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+
+/* Menu Container */
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+/* Header */
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1e293b;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%;
+    /* ทำให้แถบยาวเต็มหน้าจอ */
+    position: fixed;
+    /* ตรึงแถบให้อยู่ด้านบน */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* ให้แถบอยู่เหนือเนื้อหาอื่น */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* เพิ่มเงาเล็กน้อยเพื่อความสวยงาม */
+}
+
+
+/* Menu Logo */
+
+.menu-logo {
+    font-size: 1.5rem;
+}
+
+
+/* Menu User */
+
+.menu-user {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Logout Button */
+
+.logout-button {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #b91c1c;
+}
+
+
+/* Menu Content */
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 5rem 2rem 2rem;
+    /* เพิ่ม padding ด้านบนเพื่อป้องกันการทับกับแถบ header */
+}
+
+
+/* Menu Items */
+
+.menu-item {
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    width: 60%;
+    text-decoration: none;
+    color: #1e293b;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #e5e7eb;
+}
